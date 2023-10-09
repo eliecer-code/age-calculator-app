@@ -1,0 +1,173 @@
+.main_container {
+    height: 100vh;
+    background: var(--Off-white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+
+    & .card-container {
+        margin-top: 5em;
+        width: 90%;
+        height: auto;
+        border-radius: 1em 1em 7em 1em;
+        background: var(--White);
+        padding: 3em 2em;
+
+        & .container {
+            width: 100%;
+
+            & #form {
+                position: relative;
+                margin-bottom: 4em;
+
+                & .container_inputs {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1em;
+                    padding-bottom: 1em;
+                    width: 100%;
+                    border-bottom: 2px solid var(--Off-white);
+                    padding-bottom: 4em;
+
+                    & .date_content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 30%;
+                        box-sizing: border-box;
+
+                        & .title {
+                            text-transform: uppercase;
+                            color: var(--Smokey-grey);
+                            font-weight: 700;
+                            font-size: .8em;
+                            margin-bottom: .5em;
+                        }
+
+                        & .inputs_content {
+                            font-family: 'Poppins', sans-serif;
+                            padding: .6em;
+                            font-size: 1.2em;
+                            font-weight: 700;
+                            outline: none;
+                            border: 2px solid var(--Off-white);
+                            color: var(--Off-black);
+                            border-radius: .3em;
+
+                        }
+
+                        & .inputs_content::-webkit-outer-spin-button,
+                        .inputs_content::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        & .inputs_content[type=number] {
+                            -moz-appearance: textfield;
+                        }
+
+                        & .error {
+                            color: var(--Light-red);
+                            font-size: .45em;
+                            margin-top: 1em;
+                            font-style: italic;
+                            font-weight: 800;
+                        }
+                    }
+                }
+
+                & .btn-submit {
+                    position: absolute;
+
+                    bottom: -30px;
+                    right: 40%;
+                    border-radius: 100%;
+                    width: 60px;
+                    height: 60px;
+                    background: var(--Purple);
+                    border: none;
+                    cursor: pointer;
+
+                    & img {
+                        width: 30px;
+                    }
+                }
+
+                & .btn-submit:hover {
+                    background: var(--Off-black);
+                }
+            }
+        }
+
+        & .container_info {
+            font-style: italic;
+            font-weight: 800;
+
+            & .info {
+                font-size: 3.3em;
+
+                & .span {
+                    color: var(--Purple);
+                    padding-right: .2em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .main_container {
+        padding: 0;
+
+        & .card-container {
+            width: 45%;
+
+            & .container {
+
+                & #form {
+
+                    & .container_inputs {
+                        justify-content: start;
+
+                        & .date_content {
+                            width: 20%;
+
+                            & .title {}
+
+                            & .inputs_content {}
+                            & .error {
+                                color: var(--Light-red);
+                                font-size: .66em;
+                            }
+                        }
+                    }
+
+                    & .btn-submit {
+                        right: 0;
+                        width: 80px;
+                        height: 80px;
+                        bottom: -40px;
+
+                        & img {
+                            width: 40px;
+                        }
+                    }
+
+                    & .btn-submit:hover {}
+                }
+            }
+
+            & .container_info {
+
+                & .info {
+                    font-size: 5em;
+
+                    & .span {
+                        color: var(--Purple);
+                        padding-right: .2em;
+                    }
+                }
+            }
+        }
+    }
+}
