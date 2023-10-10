@@ -100,13 +100,13 @@ const yearsOfLife = (dateBorn) => {
 }
 
 const validateDay = (inputDay) => {
-    if (inputDay > 1 && inputDay <= 31) {
+    if (inputDay >= 1 && inputDay <= 31) {
         return true;
     }
 }
 
 const validateMonth = (inputMonth) => {
-    if (inputMonth > 1 && inputMonth <= 12) {
+    if (inputMonth >= 1 && inputMonth <= 12) {
         return true;
     }
 }
